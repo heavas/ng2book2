@@ -5,16 +5,17 @@ import { NgFor } from 'angular2/common';
 @Component({
     selector: 'hello-world',
     template: `
-        <div>
-          Hello there {{ name }}!
-        </div>
+        <ul>
+            <li *ngFor="#name of names">Hello {{ name }} </li>
+        </ul>
     `
 })
 class HelloWorld {
   name: string;
 
     constructor() {
-        this.name = 'Frederick';
+        /** this.name = 'Frederick'; */
+        this.names = ['Ari', 'Carlos', 'Felipe', 'Nate', 'Alice', 'Bob', 'Henry'];
     }
 }
 
